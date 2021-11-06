@@ -13,6 +13,8 @@ class Consumer:
         self.topic = topic_name
         self.consumer = AvroConsumer({
             'bootstrap.servers': BROKER_URLS,
+            'auto_offset_reset': 'earliest',
+            'enable_auto_commit': True,
             'group.id': 'groupid',
             'schema.registry.url': REGISTERY_URL})
         self.consumer.subscribe([self.topic])

@@ -50,10 +50,12 @@ dummy_value = {
     'first_name': 'Sajeesh',
     'last_name': 'Namboothiri',
     'age': '10',
-    'address': 'Address 1'
+    'address': '437/E, 2nd floor, Al Karmama'
 
 }
 key = {"rec_id": "123"}
+
+
 
 producer = Producer(registry=REGISTERY_URL, broker=BROKER_URLS, key=key,
                     value=dummy_value, key_schema=KEY_STR,
